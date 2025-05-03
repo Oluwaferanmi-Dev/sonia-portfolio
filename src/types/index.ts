@@ -5,13 +5,18 @@ export interface Service {
   icon?: string;
 }
 
+export interface MediaItem {
+  type: 'image' | 'video';
+  url: string;
+}
+
 export interface PortfolioItem {
   id: number;
   title: string;
   brand: string;
   description: string;
   category: string;
-  image: string;
+  media: MediaItem[]; // Changed from single image
   results?: string;
   date: string;
 }
@@ -39,12 +44,27 @@ export interface GalleryImage {
   alt: string;
 }
 
+// Sanity-specific types
 export interface SanityImage {
   _type: 'image';
   asset: {
     _ref: string;
     _type: 'reference';
   };
+}
+
+export interface SanityVideo {
+  _type: 'file';
+  asset: {
+    _ref: string;
+    _type: 'reference';
+  };
+}
+
+export interface SanityMediaItem {
+  type: 'image' | 'video';
+  image?: SanityImage;
+  video?: SanityVideo;
 }
 
 export interface SanityService {
@@ -60,7 +80,7 @@ export interface SanityPortfolio {
   brand: string;
   description: string;
   category: string;
-  image: SanityImage;
+  media: SanityMediaItem[]; // Changed from single image
   results?: string;
   date: string;
 }
