@@ -1,5 +1,5 @@
-import React from 'react';
-import { Newspaper } from 'lucide-react';
+import type React from "react"
+import { Newspaper } from "lucide-react"
 
 const Blog: React.FC = () => {
   return (
@@ -9,16 +9,14 @@ const Blog: React.FC = () => {
           <div className="flex justify-center mb-4">
             <Newspaper className="w-12 h-12 text-primary-700" />
           </div>
-          <h2 className="font-serif text-3xl md:text-4xl font-semibold text-dark-500 mb-3">
-            Coming Soon
-          </h2>
+          <h2 className="font-serif text-3xl md:text-4xl font-semibold text-dark-500 mb-3">Coming Soon</h2>
           <p className="text-dark-400 max-w-2xl mx-auto">
             Our blog section is currently under development. Check back soon for insightful articles and updates!
           </p>
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Blog;
+export default Blog
