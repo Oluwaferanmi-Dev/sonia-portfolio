@@ -59,6 +59,7 @@ export interface LocalPortfolioItem {
 }
 
 // Sanity-specific types
+// Sanity-specific types
 export interface SanityImage {
   _type: "image"
   asset: {

@@ -82,6 +82,7 @@ const Portfolio: React.FC = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-12 md:mb-16 animate-fade-in">
           <h2 className="font-serif text-3xl md:text-4xl font-semibold text-gray-800 mb-3">
+          <h2 className="font-serif text-3xl md:text-4xl font-semibold text-gray-800 mb-3">
             My <span className="text-primary-700">Portfolio</span>
           </h2>
           <p className="text-gray-500 max-w-2xl mx-auto">
@@ -89,8 +90,9 @@ const Portfolio: React.FC = () => {
           </p>
         </div>
 
+
         <div className="flex flex-wrap justify-center gap-3 mb-8 animate-fade-in">
-          {categories.map((category) => (
+          {categories.map(category => (
             <button
               key={category}
               onClick={() => setActiveCategory(category)}

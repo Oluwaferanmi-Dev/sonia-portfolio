@@ -116,6 +116,7 @@ const Testimonials: React.FC = () => {
           </p>
         </div>
 
+
         <div className="relative max-w-4xl mx-auto">
           <div className="overflow-hidden">
             <div
@@ -130,9 +131,11 @@ const Testimonials: React.FC = () => {
                         <Quote className="text-primary-700" size={32} />
                       </div>
                       <p className="text-dark-500 text-lg italic leading-relaxed whitespace-pre-line">
+                      <p className="text-dark-500 text-lg italic leading-relaxed whitespace-pre-line">
                         {testimonial.quote}
                       </p>
                     </div>
+
 
                     <div className="flex items-center">
                       <div className="w-16 h-16 rounded-full overflow-hidden mr-4 bg-gray-200">
@@ -159,6 +162,7 @@ const Testimonials: React.FC = () => {
             </div>
           </div>
 
+
           <div className="flex justify-center mt-8 gap-2">
             {testimonials.map((_, index) => (
               <button
@@ -173,12 +177,16 @@ const Testimonials: React.FC = () => {
           </div>
 
           <button
+
+          <button
             className="absolute top-1/2 -left-4 md:-left-12 -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-md flex items-center justify-center text-dark-500 hover:bg-primary-100 transition-colors"
             onClick={prevTestimonial}
             aria-label="Previous testimonial"
           >
             <ChevronLeft size={24} />
           </button>
+
+          <button
 
           <button
             className="absolute top-1/2 -right-4 md:-right-12 -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-md flex items-center justify-center text-dark-500 hover:bg-primary-100 transition-colors"
