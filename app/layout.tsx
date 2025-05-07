@@ -1,10 +1,19 @@
-import type { Metadata } from 'next'
-import './globals.css'
+import type React from "react"
+import "./globals.css"
+import type { Metadata } from "next"
+import { Inter } from "next/font/google"
+import { ThemeProvider } from "@/components/theme-provider"
+import Header from "@/components/header"
+import Footer from "@/components/footer"
+import { Toaster } from "@/components/ui/toaster"
+
+const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
-  generator: 'v0.dev',
+  title: "Sonia U. | Social Media Manager & Content Creator",
+  description:
+    "Portfolio website for Sonia U., a creative social media strategist and content creator specializing in fashion, beauty, and lifestyle brands.",
+    generator: 'v0.dev'
 }
 
 export default function RootLayout({
@@ -14,7 +23,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={inter.className}>
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
+          <Header />
+          {children}
+          <Footer />
+          <Toaster />
+        </ThemeProvider>
+      </body>
     </html>
   )
 }
