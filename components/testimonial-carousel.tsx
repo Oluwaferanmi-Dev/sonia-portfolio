@@ -16,27 +16,33 @@ interface TestimonialProps {
 const testimonials: TestimonialProps[] = [
   {
     quote: "Thank you so much for the help! Really happy with everything.",
-    name: "Sophie",
-    role: "E-commerce",
+    name: "Cinnamon",
+    role: "Food",
     avatarUrl: "/placeholder.svg?height=50&width=50",
   },
   {
     quote:
-      "Sonia transformed our social media presence completely. Our engagement has increased by 200% since working with her.",
-    name: "Michael",
+      "The video is quite nice...well done you did a great job.",
+    name: "HOUSE 43",
     role: "Fashion Brand",
     avatarUrl: "/placeholder.svg?height=50&width=50",
   },
   {
     quote:
-      "The content strategy Sonia developed for us has been a game-changer. She truly understands our brand voice.",
-    name: "Emma",
+      "The content strategy Sonia developed for us has been a game-changer. She truly understands our brand voice.Thank you Sonia for all these. You delivered exceptionally well I appreciate it Love the videos",
+    name: "KA CLOTHING",
     role: "Beauty Startup",
     avatarUrl: "/placeholder.svg?height=50&width=50",
   },
   {
-    quote: "Working with Sonia has been an absolute pleasure. She's professional, creative, and delivers results.",
-    name: "David",
+    quote: "I LOVE EEEETTTT,Thank youuu Oooooopppssss🔥🔥🔥🔥😍😍.",
+    name: "Ciar",
+    role: "Lifestyle Blog",
+    avatarUrl: "/placeholder.svg?height=50&width=50",
+  },
+  {
+    quote: "Thank you so much Sonia i truly appreciate your work I really love them Video and pictures altogether are above my expectation Super happy with your work",
+    name: "Diamond Taste",
     role: "Lifestyle Blog",
     avatarUrl: "/placeholder.svg?height=50&width=50",
   },
