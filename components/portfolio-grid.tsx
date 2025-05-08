@@ -14,22 +14,22 @@ interface PortfolioItemProps {
 
 const portfolioItems: PortfolioItemProps[] = [
   {
-    title: "Wedding Celebration",
+    title: "Saffron Cafe",
     category: "event",
     imageUrl: "/placeholder.svg?height=400&width=600",
-    description: "Comprehensive coverage of an elegant wedding event.",
+    description: "Comprehensive coverage and content creation for Saffron Cafe.",
   },
   {
-    title: "Corporate Conference",
+    title: "Philomant Conference",
     category: "event",
     imageUrl: "/placeholder.svg?height=400&width=600",
-    description: "Full social media coverage for a tech industry conference.",
+    description: "Full social media coverage for philomant university conference.",
   },
   {
-    title: "Italian Restaurant Launch",
+    title: "Confectionary Shop Launch",
     category: "food",
     imageUrl: "/placeholder.svg?height=400&width=600",
-    description: "Social media campaign for a new upscale Italian restaurant.",
+    description: "Social media campaign for a new bakery called Cinnamona.",
   },
   {
     title: "Seasonal Menu Photography",
