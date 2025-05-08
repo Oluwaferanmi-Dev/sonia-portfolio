@@ -26,6 +26,12 @@ const portfolioItems: PortfolioItemProps[] = [
     description: "Highlighting the craftsmanship of Cinnamona's pastry chefs.",
   },
   {
+    title: "Signature Desserts Showcase",
+    category: "food",
+    imageUrl: "/portfolioitems/food/food-img-eleven.jpg",
+    description: "A visual feast of Cinnamona's signature dessert creations.",
+  },
+  {
     title: "Streetwear Trends Lookbook",
     category: "fashion",
     videoUrl: "/portfolioitems/fashion/fashion-vid-four.mp4",
@@ -58,6 +64,12 @@ const portfolioItems: PortfolioItemProps[] = [
     description: "A cinematic experience of Cinnamona's dessert creations.",
   },
   {
+    title: "Exclusive Pastry ",
+    category: "food",
+    imageUrl: "/portfolioitems/food/food-img-ten.jpg",
+    description: "An exclusive event showcasing Cinnamona's finest pastries.",
+  },
+  {
     title: "Confectionary Shop Launch",
     category: "food",
     imageUrl: "/portfolioitems/food/food-img-one.jpg",
@@ -69,6 +81,13 @@ const portfolioItems: PortfolioItemProps[] = [
     videoUrl: "/portfolioitems/fashion/fashion-vid-six.mp4",
     description:
       "Innovative designs shaping the next generation of streetwear.",
+  },
+  {
+    title: "Artisan Bread Collection",
+    category: "food",
+    imageUrl: "/portfolioitems/food/food-img-nine.jpg",
+    description:
+      "Highlighting the craftsmanship behind Cinnamona's artisan breads.",
   },
   {
     title: "Saffron Cafe",
@@ -113,6 +132,13 @@ const portfolioItems: PortfolioItemProps[] = [
     category: "fashion",
     imageUrl: "/portfolioitems/fashion/fashion-img-two.jpg",
     description: "Campaign for a designer's summer collection launch.",
+  },
+  {
+    title: "Culinary Delights Unveiled",
+    category: "food",
+    imageUrl: "/portfolioitems/food/food-img-eight.jpg",
+    description:
+      "A celebration of exquisite flavors at Cinnamona's grand opening.",
   },
 ];
 
