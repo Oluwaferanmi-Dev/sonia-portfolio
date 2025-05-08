@@ -1,63 +1,130 @@
-import Image from "next/image"
-import Link from "next/link"
-import { cn } from "@/lib/utils"
-import { Playfair_Display } from "next/font/google"
+import Image from "next/image";
+import { cn } from "@/lib/utils";
+import { Playfair_Display } from "next/font/google";
 
-const playfair = Playfair_Display({ subsets: ["latin"] })
+const playfair = Playfair_Display({ subsets: ["latin"] });
 
 interface PortfolioItemProps {
-  title: string
-  category: string
-  imageUrl: string
-  description: string
+  title: string;
+  category: string;
+  imageUrl?: string;
+  videoUrl?: string;
+  description: string;
 }
 
 const portfolioItems: PortfolioItemProps[] = [
   {
-    title: "Saffron Cafe",
-    category: "event",
-    imageUrl: "/placeholder.svg?height=400&width=600",
-    description: "Comprehensive coverage and content creation for Saffron Cafe.",
+    title: "Native Wears Fashion",
+    category: "fashion",
+    videoUrl: "/portfolioitems/fashion/fashion-vid-one.mp4",
+    description: "Highlighting the latest trends in native attire fashion.",
+  },
+  {
+    title: "Artisan Pastry Showcase",
+    category: "food",
+    imageUrl: "/portfolioitems/food/food-img-two.jpg",
+    description: "Highlighting the craftsmanship of Cinnamona's pastry chefs.",
+  },
+  {
+    title: "Streetwear Trends Lookbook",
+    category: "fashion",
+    videoUrl: "/portfolioitems/fashion/fashion-vid-four.mp4",
+    description: "A curated showcase of the latest streetwear trends.",
   },
   {
     title: "Philomant Conference",
     category: "event",
-    imageUrl: "/placeholder.svg?height=400&width=600",
-    description: "Full social media coverage for philomant university conference.",
+    videoUrl: "/portfolioitems/events/eventplanning/event-vid-one.mp4",
+    description:
+      "Full social media coverage for philomant university conference.",
+  },
+  {
+    title: "Elegant Dinner Table Setting",
+    category: "food",
+    imageUrl: "/portfolioitems/food/food-img-three.jpg",
+    description:
+      "A showcase of refined table arrangements for a gourmet experience.",
+  },
+  {
+    title: "Essential Streetwear Pieces",
+    category: "fashion",
+    videoUrl: "/portfolioitems/fashion/fashion-vid-two.mp4",
+    description: "A collection of versatile and stylish streetwear essentials.",
+  },
+  {
+    title: "The Sweet Symphony",
+    category: "food",
+    videoUrl: "/portfolioitems/food/food-vid-two.mp4",
+    description: "A cinematic experience of Cinnamona's dessert creations.",
   },
   {
     title: "Confectionary Shop Launch",
     category: "food",
-    imageUrl: "/placeholder.svg?height=400&width=600",
+    imageUrl: "/portfolioitems/food/food-img-one.jpg",
     description: "Social media campaign for a new bakery called Cinnamona.",
   },
   {
-    title: "Seasonal Menu Photography",
-    category: "food",
-    imageUrl: "/placeholder.svg?height=400&width=600",
-    description: "Food photography and content creation for a seasonal menu launch.",
+    title: "Future of Urban Fashion",
+    category: "fashion",
+    videoUrl: "/portfolioitems/fashion/fashion-vid-six.mp4",
+    description:
+      "Innovative designs shaping the next generation of streetwear.",
   },
   {
-    title: "Summer Collection",
+    title: "Saffron Cafe",
+    category: "event",
+    videoUrl: "/portfolioitems/events/cafe/cafe-one-vid.mp4",
+    description:
+      "Comprehensive coverage and content creation for Saffron Cafe.",
+  },
+  {
+    title: "Edgy Urban Styles",
     category: "fashion",
-    imageUrl: "/placeholder.svg?height=400&width=600",
-    description: "Campaign for a designer's summer collection launch.",
+    videoUrl: "/portfolioitems/fashion/fashion-vid-three.mp4",
+    description: "Exploring bold and innovative designs in urban fashion.",
+  },
+  {
+    title: "Gourmet Dessert Collection",
+    category: "food",
+    imageUrl: "/portfolioitems/food/food-img-six.jpg",
+    description: "A visual journey through Cinnamona's signature desserts.",
+  },
+  {
+    title: "Seasonal Treats Campaign",
+    category: "food",
+    imageUrl: "/portfolioitems/food/food-img-four.jpg",
+    description: "Promoting Cinnamona's limited-edition seasonal offerings.",
+  },
+  {
+    title: "Baking Masterclass Highlights",
+    category: "food",
+    imageUrl: "/portfolioitems/food/food-img-five.jpg",
+    description: "Capturing moments from Cinnamona's exclusive baking classes.",
   },
   {
     title: "Streetwear Brand",
     category: "fashion",
-    imageUrl: "/placeholder.svg?height=400&width=600",
-    description: "Social media strategy and content for an urban fashion brand.",
+    videoUrl: "/portfolioitems/fashion/fashion-vid-five.mp4",
+    description:
+      "Social media strategy and content for an urban fashion brand.",
   },
-]
+  {
+    title: "Summer Collection",
+    category: "fashion",
+    imageUrl: "/portfolioitems/fashion/fashion-img-two.jpg",
+    description: "Campaign for a designer's summer collection launch.",
+  },
+];
 
 interface PortfolioGridProps {
-  category?: string
+  category?: string;
 }
 
 export default function PortfolioGrid({ category }: PortfolioGridProps) {
   const filteredItems =
-    category && category !== "all" ? portfolioItems.filter((item) => item.category === category) : portfolioItems
+    category && category !== "all"
+      ? portfolioItems.filter((item) => item.category === category)
+      : portfolioItems;
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -67,33 +134,36 @@ export default function PortfolioGrid({ category }: PortfolioGridProps) {
           className="group bg-white rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border border-transparent hover:border-[#F9E6E6]"
         >
           <div className="overflow-hidden">
-            <Image
-              src={item.imageUrl || "/placeholder.svg"}
-              alt={item.title}
-              width={600}
-              height={400}
-              className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
-            />
+            {item.videoUrl ? (
+              <video
+                src={item.videoUrl}
+                controls
+                loop
+                className="w-full h-64 object-cover outline-none border-none"
+              />
+            ) : (
+              <Image
+                src={item.imageUrl || "/placeholder.svg"}
+                alt={item.title}
+                width={600}
+                height={400}
+                className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+            )}
           </div>
           <div className="p-5 transition-all duration-300 group-hover:bg-[#FFFAFA]">
             <h3
               className={cn(
                 "text-xl font-bold mb-2 transition-colors duration-300 group-hover:text-[#D8A1A1]",
-                playfair.className,
+                playfair.className
               )}
             >
               {item.title}
             </h3>
             <p className="text-[#555555] mb-3">{item.description}</p>
-            <Link
-              href="#"
-              className="text-[#D8A1A1] hover:text-[#C48E8E] font-medium inline-flex items-center transition-all duration-300 relative after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-0 after:bg-[#C48E8E] after:transition-all after:duration-300 group-hover:after:w-full"
-            >
-              View Project
-            </Link>
           </div>
         </div>
       ))}
     </div>
-  )
+  );
 }
